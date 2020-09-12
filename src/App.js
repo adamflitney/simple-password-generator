@@ -1,23 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import generatePassword from './PasswordService';
 import './App.css';
 
 function App() {
+  const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    setPassword(generatePassword());
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>{password}</h1>
+        {/* Refresh by Cris Dobbins from the Noun Project */}
+        <button className="refresh" onClick={() => setPassword(generatePassword())}>🔄</button>
       </header>
     </div>
   );

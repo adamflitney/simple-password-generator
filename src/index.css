@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  letter-spacing: 0.1rem;
+}
+
+.refresh {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 3rem;
+}
