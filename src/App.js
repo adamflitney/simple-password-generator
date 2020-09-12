@@ -13,7 +13,7 @@ function App() {
       <header className="App-header">
         <h1>{password}</h1>
         {/* Refresh by Cris Dobbins from the Noun Project */}
-        <button className="refresh" onClick={() => setPassword(generatePassword())}>🔄</button>
+        <button className="refresh" onClick={() => setPassword(generatePassword())}><span role="img" aria-label="refresh">🔄</span></button>
       </header>
     </div>
   );
