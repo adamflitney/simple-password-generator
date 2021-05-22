@@ -144,24 +144,20 @@ const animals = [
 ]
 
 export default function generatePassword() {
-  let password = ''
-
   const randomAdjective =
     adjectives[Math.floor(Math.random() * adjectives.length)]
-  console.log('adjective', randomAdjective)
+  // console.log('adjective', randomAdjective)
 
   const randomColour = colours[Math.floor(Math.random() * colours.length)]
-  console.log('random number', Math.floor(Math.random() * colours.length))
-  console.log('colour', randomColour)
+  // console.log('random number', Math.floor(Math.random() * colours.length))
+  // console.log('colour', randomColour)
 
   const randomAnimal = animals[Math.floor(Math.random() * animals.length)]
-  console.log('animal', randomAnimal)
+  // console.log('animal', randomAnimal)
 
   const randomNumber = Math.floor(Math.random() * 99)
   const randomTwoDigitNumber =
     randomNumber > 9 ? randomNumber : '0' + randomNumber
 
-  password = `${randomAdjective}${randomColour}${randomAnimal}${randomTwoDigitNumber}`
-
-  return password
+  return `${randomAdjective}${randomColour}${randomAnimal}${randomTwoDigitNumber}`
 }
